@@ -1145,6 +1145,447 @@
             width: 24px;
             height: 24px;
         }
+
+        /* Tax Calculator Section */
+        .calculator-section {
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+            color: white;
+            padding: 80px 30px;
+        }
+
+        .calculator-section .section-badge {
+            background: var(--mint);
+            color: var(--black);
+            border-color: var(--mint);
+        }
+
+        .calculator-section .section-title {
+            color: white;
+        }
+
+        .calculator-section .section-subtitle {
+            color: #9CA3AF;
+        }
+
+        .calculator-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .calculator-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.5fr;
+            gap: 30px;
+        }
+
+        @media (max-width: 900px) {
+            .calculator-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Input Panel */
+        .calc-input-panel {
+            background: #2D2D2D;
+            border: 3px solid var(--mint);
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 6px 6px 0 var(--mint);
+        }
+
+        .calc-input-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 2px dashed #444;
+        }
+
+        .calc-input-header h3 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.3rem;
+            font-weight: 700;
+        }
+
+        .input-group {
+            margin-bottom: 25px;
+        }
+
+        .input-group label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 10px;
+            font-size: 0.95rem;
+            color: #E5E7EB;
+        }
+
+        .input-group label .required {
+            color: var(--coral);
+        }
+
+        .input-group input[type="text"],
+        .input-group input[type="number"],
+        .input-group select {
+            width: 100%;
+            padding: 14px 16px;
+            background: #1a1a1a;
+            border: 2px solid #444;
+            border-radius: 12px;
+            color: white;
+            font-size: 1rem;
+            font-family: inherit;
+            transition: all 0.2s;
+        }
+
+        .input-group input:focus,
+        .input-group select:focus {
+            outline: none;
+            border-color: var(--mint);
+            box-shadow: 0 0 0 3px rgba(78, 205, 196, 0.2);
+        }
+
+        .input-group select {
+            cursor: pointer;
+            appearance: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%234ECDC4' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 12px center;
+            padding-right: 45px;
+        }
+
+        .input-hint {
+            font-size: 0.85rem;
+            color: #9CA3AF;
+            margin-top: 8px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .input-hint.suggestion {
+            background: rgba(78, 205, 196, 0.1);
+            border: 1px solid var(--mint);
+            padding: 10px 12px;
+            border-radius: 8px;
+            margin-top: 12px;
+        }
+
+        .revenue-display {
+            text-align: center;
+            padding: 15px;
+            background: linear-gradient(135deg, var(--mint), #3AA99F);
+            border-radius: 12px;
+            margin-top: 10px;
+        }
+
+        .revenue-display .amount {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: var(--black);
+        }
+
+        .revenue-display .unit {
+            font-size: 0.9rem;
+            color: #1a1a1a;
+        }
+
+        /* Range Slider */
+        .range-container {
+            margin-top: 10px;
+        }
+
+        .range-slider {
+            width: 100%;
+            height: 8px;
+            border-radius: 5px;
+            background: #444;
+            outline: none;
+            -webkit-appearance: none;
+            cursor: pointer;
+        }
+
+        .range-slider::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            background: var(--mint);
+            border: 3px solid white;
+            cursor: pointer;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+        }
+
+        .range-labels {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.8rem;
+            color: #9CA3AF;
+            margin-top: 8px;
+        }
+
+        /* Results Panel */
+        .calc-results-panel {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .results-comparison {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        @media (max-width: 600px) {
+            .results-comparison {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .result-card {
+            background: #2D2D2D;
+            border: 3px solid #444;
+            border-radius: 20px;
+            overflow: hidden;
+            transition: all 0.3s;
+        }
+
+        .result-card.option-a {
+            border-color: var(--yellow);
+        }
+
+        .result-card.option-b {
+            border-color: var(--blue);
+        }
+
+        .result-card.winner {
+            box-shadow: 0 0 30px rgba(78, 205, 196, 0.4);
+            border-color: var(--mint) !important;
+            transform: scale(1.02);
+        }
+
+        .result-card-header {
+            padding: 20px;
+            text-align: center;
+            position: relative;
+        }
+
+        .result-card.option-a .result-card-header {
+            background: linear-gradient(135deg, #FEF3C7, #FDE68A);
+            color: var(--black);
+        }
+
+        .result-card.option-b .result-card-header {
+            background: linear-gradient(135deg, #DBEAFE, #BFDBFE);
+            color: var(--black);
+        }
+
+        .result-card-header .badge {
+            display: inline-block;
+            padding: 4px 12px;
+            background: white;
+            border: 2px solid var(--black);
+            border-radius: 15px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .result-card-header h4 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.1rem;
+            font-weight: 700;
+        }
+
+        .winner-badge {
+            position: absolute;
+            top: -10px;
+            right: 10px;
+            background: var(--mint);
+            color: var(--black);
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            border: 2px solid var(--black);
+            box-shadow: 2px 2px 0 var(--black);
+        }
+
+        .result-card-body {
+            padding: 20px;
+        }
+
+        .result-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 0;
+            border-bottom: 1px solid #444;
+        }
+
+        .result-row:last-child {
+            border-bottom: none;
+        }
+
+        .result-row .label {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: #9CA3AF;
+            font-size: 0.9rem;
+        }
+
+        .result-row .value {
+            font-weight: 700;
+            font-size: 1rem;
+        }
+
+        .result-row.total {
+            margin-top: 10px;
+            padding-top: 15px;
+            border-top: 2px dashed #444;
+        }
+
+        .result-row.total .label {
+            color: white;
+            font-weight: 700;
+        }
+
+        .result-row.total .value {
+            font-size: 1.3rem;
+            color: var(--coral);
+        }
+
+        .result-card.winner .result-row.total .value {
+            color: var(--mint);
+        }
+
+        /* Recommendation Box */
+        .recommendation-box {
+            background: linear-gradient(135deg, var(--mint), #3AA99F);
+            border: 3px solid var(--black);
+            border-radius: 20px;
+            padding: 25px;
+            text-align: center;
+            box-shadow: 6px 6px 0 var(--black);
+        }
+
+        .recommendation-box .icon {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        .recommendation-box h4 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--black);
+            margin-bottom: 8px;
+        }
+
+        .recommendation-box p {
+            color: #1a1a1a;
+            font-size: 0.95rem;
+        }
+
+        .recommendation-box .savings {
+            display: inline-block;
+            background: white;
+            border: 2px solid var(--black);
+            padding: 8px 20px;
+            border-radius: 25px;
+            font-weight: 800;
+            font-size: 1.2rem;
+            color: var(--coral);
+            margin-top: 12px;
+            box-shadow: 3px 3px 0 var(--black);
+        }
+
+        /* Comparison Chart */
+        .comparison-chart {
+            background: #2D2D2D;
+            border: 3px solid #444;
+            border-radius: 20px;
+            padding: 25px;
+        }
+
+        .chart-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .chart-header h4 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.1rem;
+            font-weight: 700;
+        }
+
+        .chart-bars {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .chart-bar-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .chart-bar-label {
+            width: 100px;
+            font-size: 0.85rem;
+            color: #9CA3AF;
+        }
+
+        .chart-bar-container {
+            flex: 1;
+            height: 35px;
+            background: #1a1a1a;
+            border-radius: 8px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .chart-bar {
+            height: 100%;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            padding-right: 12px;
+            font-weight: 700;
+            font-size: 0.85rem;
+            transition: width 0.5s ease;
+        }
+
+        .chart-bar.option-a {
+            background: linear-gradient(90deg, #FDE68A, #F59E0B);
+            color: var(--black);
+        }
+
+        .chart-bar.option-b {
+            background: linear-gradient(90deg, #BFDBFE, #3B82F6);
+            color: white;
+        }
+
+        /* Disclaimer */
+        .calc-disclaimer {
+            background: rgba(255,255,255,0.05);
+            border: 1px dashed #444;
+            border-radius: 12px;
+            padding: 15px;
+            font-size: 0.85rem;
+            color: #9CA3AF;
+            text-align: center;
+        }
+
+        .calc-disclaimer strong {
+            color: var(--coral);
+        }
     </style>
 </head>
 <body>
@@ -1159,7 +1600,7 @@
         <nav class="nav-pills">
             <a href="#big-update" class="pill new">🔥 Big Update</a>
             <a href="#tax-types" class="pill">💰 Các loại thuế</a>
-            <a href="#options" class="pill">⚖️ So sánh</a>
+            <a href="#calculator" class="pill" style="background: var(--mint); color: var(--black);">🧮 Tính thuế</a>
             <a href="#case-study" class="pill">📊 Ví dụ</a>
             <a href="#action" class="pill">🚀 Hành động</a>
         </nav>
@@ -1441,6 +1882,202 @@
                             ✅ Thuế suất TNCN thấp (0.5% - 1.5%) tính trên phần vượt<br>
                             ✅ Phương án B chỉ lợi khi <strong>lỗ hoặc biên lãi < 2.7%</strong>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tax Calculator Section -->
+    <section class="calculator-section" id="calculator">
+        <div class="section-header">
+            <div class="section-badge">🧮 CÔNG CỤ</div>
+            <h2 class="section-title">Tính thuế & So sánh Tối ưu 2026</h2>
+            <p class="section-subtitle">Nhập thông tin để so sánh Phương án A (Khoán) vs Phương án B (Kê khai) - Kết quả real-time!</p>
+        </div>
+
+        <div class="calculator-container">
+            <div class="calculator-grid">
+                <!-- Input Panel -->
+                <div class="calc-input-panel">
+                    <div class="calc-input-header">
+                        <span style="font-size: 1.5rem;">📝</span>
+                        <h3>Thông tin kinh doanh</h3>
+                    </div>
+
+                    <!-- Industry Select -->
+                    <div class="input-group">
+                        <label>Ngành nghề kinh doanh <span class="required">*</span></label>
+                        <select id="industrySelect" onchange="calculateTax()">
+                            <option value="" disabled>-- Chọn ngành nghề --</option>
+                            <optgroup label="🛒 Thương mại / Bán lẻ (GTGT 1%, TNCN 0.5%)">
+                                <option value="retail" data-vat="0.01" data-pit="0.005">Tạp hóa, Siêu thị mini</option>
+                                <option value="fashion" data-vat="0.01" data-pit="0.005">Quần áo, Thời trang</option>
+                                <option value="cosmetic" data-vat="0.01" data-pit="0.005">Mỹ phẩm</option>
+                                <option value="baby" data-vat="0.01" data-pit="0.005">Mẹ và bé</option>
+                                <option value="food-retail" data-vat="0.01" data-pit="0.005">Thực phẩm</option>
+                                <option value="household" data-vat="0.01" data-pit="0.005">Gia dụng, sinh hoạt</option>
+                                <option value="electronics" data-vat="0.01" data-pit="0.005">Điện tử, điện máy</option>
+                                <option value="pharmacy" data-vat="0.01" data-pit="0.005">Thuốc, thực phẩm chức năng</option>
+                                <option value="furniture" data-vat="0.01" data-pit="0.005">Nội thất, trang trí</option>
+                            </optgroup>
+                            <optgroup label="🍜 Dịch vụ ăn uống / F&B (GTGT 3%, TNCN 1.5%)">
+                                <option value="restaurant" data-vat="0.03" data-pit="0.015" selected>Nhà hàng, quán ăn</option>
+                                <option value="cafe" data-vat="0.03" data-pit="0.015">Quán cafe, trà sữa</option>
+                                <option value="bar" data-vat="0.03" data-pit="0.015">Bar, pub, karaoke</option>
+                            </optgroup>
+                            <optgroup label="💆 Dịch vụ (GTGT 5%, TNCN 2%)">
+                                <option value="spa" data-vat="0.05" data-pit="0.02">Spa, dịch vụ làm đẹp</option>
+                                <option value="hotel" data-vat="0.05" data-pit="0.02">Homestay, nhà nghỉ</option>
+                                <option value="billiard" data-vat="0.05" data-pit="0.02">Bida, giải trí</option>
+                                <option value="repair" data-vat="0.05" data-pit="0.02">Sửa chữa, bảo trì</option>
+                                <option value="education" data-vat="0.05" data-pit="0.02">Dạy học, đào tạo</option>
+                            </optgroup>
+                            <optgroup label="🏗️ Xây dựng (GTGT 5%, TNCN 2%)">
+                                <option value="construction" data-vat="0.05" data-pit="0.02">Xây dựng, thi công</option>
+                            </optgroup>
+                        </select>
+                    </div>
+
+                    <!-- Revenue Input -->
+                    <div class="input-group">
+                        <label>Doanh thu dự kiến/năm <span class="required">*</span></label>
+                        <input type="text" id="revenueInput" placeholder="Ví dụ: 1,500,000,000" oninput="formatRevenue(this); calculateTax()">
+                        <div class="range-container">
+                            <input type="range" class="range-slider" id="revenueSlider" min="0" max="5000000000" step="50000000" value="600000000" oninput="updateRevenueFromSlider(this.value)">
+                            <div class="range-labels">
+                                <span>0</span>
+                                <span>500tr</span>
+                                <span>1 tỷ</span>
+                                <span>2 tỷ</span>
+                                <span>3 tỷ</span>
+                                <span>5 tỷ</span>
+                            </div>
+                        </div>
+                        <div class="revenue-display">
+                            <div class="amount" id="revenueDisplay">600,000,000</div>
+                            <div class="unit">VND/năm</div>
+                        </div>
+                    </div>
+
+                    <!-- Expense Input -->
+                    <div class="input-group">
+                        <label>Chi phí hợp lý dự kiến/năm</label>
+                        <input type="text" id="expenseInput" placeholder="Ví dụ: 400,000,000" oninput="formatExpense(this); calculateTax()">
+                        <div class="input-hint">
+                            💡 Bao gồm: giá vốn, thuê mặt bằng, điện nước, lương nhân viên...
+                        </div>
+                        <div class="input-hint suggestion" id="expenseSuggestion">
+                            <strong>Gợi ý:</strong> Ngành này thường có chi phí khoảng <span id="suggestedExpense">70-80%</span> doanh thu
+                        </div>
+                    </div>
+
+                    <!-- Accounting Cost (Optional) -->
+                    <div class="input-group">
+                        <label>Chi phí kế toán/năm (nếu chọn B)</label>
+                        <input type="text" id="accountingCostInput" placeholder="Mặc định: 12,000,000" value="12,000,000" oninput="formatAccountingCost(this); calculateTax()">
+                        <div class="input-hint">
+                            📋 Chi phí thuê kế toán, phần mềm, chữ ký số (~1-2tr/tháng)
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Results Panel -->
+                <div class="calc-results-panel">
+                    <!-- Comparison Cards -->
+                    <div class="results-comparison">
+                        <!-- Option A Card -->
+                        <div class="result-card option-a" id="resultCardA">
+                            <div class="result-card-header">
+                                <span class="badge">🅰️ PHƯƠNG ÁN A</span>
+                                <h4>Không kê khai (Khoán)</h4>
+                                <div class="winner-badge" id="winnerBadgeA" style="display: none;">✨ TỐI ƯU</div>
+                            </div>
+                            <div class="result-card-body">
+                                <div class="result-row">
+                                    <span class="label"><span>🏷️</span> Thuế GTGT</span>
+                                    <span class="value" id="vatA">0đ</span>
+                                </div>
+                                <div class="result-row">
+                                    <span class="label"><span>👤</span> Thuế TNCN</span>
+                                    <span class="value" id="pitA">0đ</span>
+                                </div>
+                                <div class="result-row">
+                                    <span class="label"><span>📋</span> Chi phí quản lý</span>
+                                    <span class="value">0đ</span>
+                                </div>
+                                <div class="result-row total">
+                                    <span class="label">TỔNG CỘNG</span>
+                                    <span class="value" id="totalA">0đ</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Option B Card -->
+                        <div class="result-card option-b" id="resultCardB">
+                            <div class="result-card-header">
+                                <span class="badge">🅱️ PHƯƠNG ÁN B</span>
+                                <h4>Kê khai (Sổ sách)</h4>
+                                <div class="winner-badge" id="winnerBadgeB" style="display: none;">✨ TỐI ƯU</div>
+                            </div>
+                            <div class="result-card-body">
+                                <div class="result-row">
+                                    <span class="label"><span>🏷️</span> Thuế GTGT</span>
+                                    <span class="value" id="vatB">0đ</span>
+                                </div>
+                                <div class="result-row">
+                                    <span class="label"><span>👤</span> Thuế TNCN</span>
+                                    <span class="value" id="pitB">0đ</span>
+                                </div>
+                                <div class="result-row">
+                                    <span class="label"><span>📋</span> Chi phí quản lý</span>
+                                    <span class="value" id="accountingCostB">12,000,000đ</span>
+                                </div>
+                                <div class="result-row total">
+                                    <span class="label">TỔNG CỘNG</span>
+                                    <span class="value" id="totalB">0đ</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Recommendation Box -->
+                    <div class="recommendation-box" id="recommendationBox">
+                        <div class="icon" id="recommendIcon">🎯</div>
+                        <h4 id="recommendTitle">Nhập thông tin để xem khuyến nghị</h4>
+                        <p id="recommendDesc">Công cụ sẽ tự động so sánh 2 phương án và đưa ra gợi ý tối ưu cho bạn.</p>
+                        <div class="savings" id="savingsAmount" style="display: none;">Tiết kiệm: 0đ/năm</div>
+                    </div>
+
+                    <!-- Comparison Chart -->
+                    <div class="comparison-chart">
+                        <div class="chart-header">
+                            <h4>📊 Biểu đồ so sánh</h4>
+                        </div>
+                        <div class="chart-bars">
+                            <div class="chart-bar-item">
+                                <div class="chart-bar-label">Phương án A</div>
+                                <div class="chart-bar-container">
+                                    <div class="chart-bar option-a" id="chartBarA" style="width: 50%;">
+                                        <span id="chartValueA">0đ</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="chart-bar-item">
+                                <div class="chart-bar-label">Phương án B</div>
+                                <div class="chart-bar-container">
+                                    <div class="chart-bar option-b" id="chartBarB" style="width: 50%;">
+                                        <span id="chartValueB">0đ</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Disclaimer -->
+                    <div class="calc-disclaimer">
+                        <strong>⚠️ Lưu ý:</strong> Đây là công cụ tính toán tham khảo dựa trên Dự thảo Luật & Công văn 18491/BTC-CST. 
+                        Kết quả thực tế có thể thay đổi khi Luật chính thức ban hành. Vui lòng liên hệ cơ quan thuế để được hướng dẫn chi tiết.
                     </div>
                 </div>
             </div>
@@ -1828,6 +2465,261 @@
             card.style.transform = 'translateY(30px)';
             card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
             observer.observe(card);
+        });
+
+        // ============================================
+        // TAX CALCULATOR - Phase 1 MVP
+        // ============================================
+
+        // Constants
+        const LIMIT_REVENUE = 500000000; // 500 million VND
+        const TAX_RATE_PROFIT_METHOD_B = 0.15; // 15%
+
+        // Industry expense ratio suggestions
+        const EXPENSE_SUGGESTIONS = {
+            'retail': '75-85%',
+            'fashion': '65-75%',
+            'cosmetic': '60-70%',
+            'baby': '70-80%',
+            'food-retail': '80-90%',
+            'household': '70-80%',
+            'electronics': '85-92%',
+            'pharmacy': '70-80%',
+            'furniture': '65-75%',
+            'restaurant': '60-70%',
+            'cafe': '55-65%',
+            'bar': '50-60%',
+            'spa': '40-55%',
+            'hotel': '50-65%',
+            'billiard': '45-55%',
+            'repair': '50-60%',
+            'education': '30-45%',
+            'construction': '75-85%'
+        };
+
+        // Format number with commas
+        function formatNumber(num) {
+            return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+        }
+
+        // Parse number from formatted string
+        function parseFormattedNumber(str) {
+            return parseInt(str.replace(/,/g, '')) || 0;
+        }
+
+        // Format currency display
+        function formatCurrency(num) {
+            if (num >= 1000000000) {
+                return (num / 1000000000).toFixed(1) + ' tỷ';
+            } else if (num >= 1000000) {
+                return (num / 1000000).toFixed(0) + ' triệu';
+            } else {
+                return formatNumber(num) + 'đ';
+            }
+        }
+
+        // Format revenue input
+        function formatRevenue(input) {
+            let value = input.value.replace(/[^\d]/g, '');
+            if (value) {
+                input.value = formatNumber(value);
+                document.getElementById('revenueSlider').value = parseInt(value);
+                document.getElementById('revenueDisplay').textContent = formatNumber(value);
+            }
+        }
+
+        // Format expense input
+        function formatExpense(input) {
+            let value = input.value.replace(/[^\d]/g, '');
+            if (value) {
+                input.value = formatNumber(value);
+            }
+        }
+
+        // Format accounting cost input
+        function formatAccountingCost(input) {
+            let value = input.value.replace(/[^\d]/g, '');
+            if (value) {
+                input.value = formatNumber(value);
+            }
+        }
+
+        // Update revenue from slider
+        function updateRevenueFromSlider(value) {
+            document.getElementById('revenueInput').value = formatNumber(value);
+            document.getElementById('revenueDisplay').textContent = formatNumber(value);
+            calculateTax();
+        }
+
+        // Update expense suggestion based on industry
+        function updateExpenseSuggestion() {
+            const select = document.getElementById('industrySelect');
+            const selectedOption = select.options[select.selectedIndex];
+            const industryValue = selectedOption.value;
+            const suggestion = EXPENSE_SUGGESTIONS[industryValue] || '60-75%';
+            document.getElementById('suggestedExpense').textContent = suggestion;
+        }
+
+        // Main calculation function
+        function calculateTax() {
+            const select = document.getElementById('industrySelect');
+            const selectedOption = select.options[select.selectedIndex];
+            
+            if (!selectedOption || !selectedOption.value) {
+                return;
+            }
+
+            // Get rates from selected option
+            const vatRate = parseFloat(selectedOption.dataset.vat) || 0;
+            const pitRate = parseFloat(selectedOption.dataset.pit) || 0;
+
+            // Get input values
+            const revenue = parseFormattedNumber(document.getElementById('revenueInput').value);
+            const expense = parseFormattedNumber(document.getElementById('expenseInput').value);
+            const accountingCost = parseFormattedNumber(document.getElementById('accountingCostInput').value) || 12000000;
+
+            // Update expense suggestion
+            updateExpenseSuggestion();
+
+            // Calculate profit
+            const profit = Math.max(0, revenue - expense);
+
+            // ============================================
+            // OPTION A: Không kê khai (Khoán)
+            // ============================================
+            // VAT: Total Revenue × VAT Rate
+            const vatA = revenue * vatRate;
+            
+            // PIT: (Revenue - 500tr) × PIT Rate (only if revenue > 500tr)
+            let pitA = 0;
+            if (revenue > LIMIT_REVENUE) {
+                pitA = (revenue - LIMIT_REVENUE) * pitRate;
+            }
+            
+            const totalA = vatA + pitA;
+
+            // ============================================
+            // OPTION B: Kê khai (Sổ sách)
+            // ============================================
+            // VAT: Total Revenue × VAT Rate (same as A)
+            const vatB = revenue * vatRate;
+            
+            // PIT: Profit × 15%
+            let pitB = 0;
+            if (profit > 0) {
+                pitB = profit * TAX_RATE_PROFIT_METHOD_B;
+            }
+            
+            const totalB = vatB + pitB + accountingCost;
+
+            // ============================================
+            // Update UI
+            // ============================================
+            
+            // Option A values
+            document.getElementById('vatA').textContent = formatNumber(Math.round(vatA)) + 'đ';
+            document.getElementById('pitA').textContent = formatNumber(Math.round(pitA)) + 'đ';
+            document.getElementById('totalA').textContent = formatNumber(Math.round(totalA)) + 'đ';
+
+            // Option B values
+            document.getElementById('vatB').textContent = formatNumber(Math.round(vatB)) + 'đ';
+            document.getElementById('pitB').textContent = formatNumber(Math.round(pitB)) + 'đ';
+            document.getElementById('accountingCostB').textContent = formatNumber(accountingCost) + 'đ';
+            document.getElementById('totalB').textContent = formatNumber(Math.round(totalB)) + 'đ';
+
+            // Determine winner
+            const cardA = document.getElementById('resultCardA');
+            const cardB = document.getElementById('resultCardB');
+            const badgeA = document.getElementById('winnerBadgeA');
+            const badgeB = document.getElementById('winnerBadgeB');
+
+            cardA.classList.remove('winner');
+            cardB.classList.remove('winner');
+            badgeA.style.display = 'none';
+            badgeB.style.display = 'none';
+
+            const savings = Math.abs(totalA - totalB);
+
+            if (totalA < totalB) {
+                cardA.classList.add('winner');
+                badgeA.style.display = 'block';
+                updateRecommendation('A', savings, revenue);
+            } else if (totalB < totalA) {
+                cardB.classList.add('winner');
+                badgeB.style.display = 'block';
+                updateRecommendation('B', savings, revenue);
+            } else {
+                updateRecommendation('EQUAL', 0, revenue);
+            }
+
+            // Update chart
+            updateChart(totalA, totalB);
+        }
+
+        // Update recommendation box
+        function updateRecommendation(winner, savings, revenue) {
+            const iconEl = document.getElementById('recommendIcon');
+            const titleEl = document.getElementById('recommendTitle');
+            const descEl = document.getElementById('recommendDesc');
+            const savingsEl = document.getElementById('savingsAmount');
+
+            if (revenue <= LIMIT_REVENUE) {
+                iconEl.textContent = '🎉';
+                titleEl.textContent = 'Chúc mừng! Bạn được MIỄN THUẾ';
+                descEl.textContent = 'Doanh thu dưới 500 triệu/năm được miễn hoàn toàn thuế GTGT và TNCN theo quy định mới 2026.';
+                savingsEl.style.display = 'none';
+                return;
+            }
+
+            savingsEl.style.display = 'inline-block';
+            savingsEl.textContent = 'Tiết kiệm: ' + formatNumber(Math.round(savings)) + 'đ/năm';
+
+            if (winner === 'A') {
+                iconEl.textContent = '🅰️';
+                titleEl.textContent = 'Nên chọn Phương án A (Khoán)';
+                descEl.textContent = 'Thuế suất TNCN khoán thấp (0.5%-2%) và được trừ 500 triệu doanh thu giúp bạn tiết kiệm đáng kể.';
+            } else if (winner === 'B') {
+                iconEl.textContent = '🅱️';
+                titleEl.textContent = 'Nên chọn Phương án B (Kê khai)';
+                descEl.textContent = 'Biên lợi nhuận thấp hoặc chi phí cao, nên tính thuế trên lợi nhuận thực tế sẽ lợi hơn cho bạn.';
+            } else {
+                iconEl.textContent = '⚖️';
+                titleEl.textContent = 'Hai phương án tương đương';
+                descEl.textContent = 'Bạn có thể chọn phương án nào cũng được. Khuyến nghị chọn A vì thủ tục đơn giản hơn.';
+                savingsEl.style.display = 'none';
+            }
+        }
+
+        // Update comparison chart
+        function updateChart(totalA, totalB) {
+            const maxValue = Math.max(totalA, totalB, 1);
+            
+            const barA = document.getElementById('chartBarA');
+            const barB = document.getElementById('chartBarB');
+            const valueA = document.getElementById('chartValueA');
+            const valueB = document.getElementById('chartValueB');
+
+            const percentA = (totalA / maxValue) * 100;
+            const percentB = (totalB / maxValue) * 100;
+
+            barA.style.width = Math.max(percentA, 10) + '%';
+            barB.style.width = Math.max(percentB, 10) + '%';
+
+            valueA.textContent = formatCurrency(Math.round(totalA));
+            valueB.textContent = formatCurrency(Math.round(totalB));
+        }
+
+        // Initialize on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            // Set default values
+            document.getElementById('revenueInput').value = '600,000,000';
+            document.getElementById('revenueSlider').value = 600000000;
+            document.getElementById('revenueDisplay').textContent = '600,000,000';
+            document.getElementById('expenseInput').value = '480,000,000';
+            document.getElementById('accountingCostInput').value = '12,000,000';
+            
+            // Initial calculation
+            calculateTax();
         });
     </script>
 </body>
