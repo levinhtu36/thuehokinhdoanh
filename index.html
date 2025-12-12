@@ -3,8 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cải Cách Thuế Hộ Kinh Doanh 2026 | Hướng Dẫn Chi Tiết</title>
+    <title>Cải Cách Thuế HKD 2026 | Báo Cáo Chuyên Đề</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
+        :root {
+            --cream: #FDF6E3;
+            --cream-dark: #F5E6C8;
+            --black: #1a1a1a;
+            --coral: #FF6B6B;
+            --coral-light: #FF8585;
+            --mint: #4ECDC4;
+            --mint-light: #7EDDD6;
+            --yellow: #FFE66D;
+            --yellow-dark: #F5D93A;
+            --purple: #A855F7;
+            --blue: #3B82F6;
+            --orange: #F97316;
+            --border: 3px solid var(--black);
+            --border-thick: 5px solid var(--black);
+            --shadow: 6px 6px 0 var(--black);
+            --shadow-hover: 8px 8px 0 var(--black);
+        }
+
         * {
             margin: 0;
             padding: 0;
@@ -12,657 +34,1801 @@
         }
 
         body {
-            font-family: 'Arial', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-            background: linear-gradient(135deg, #f5e6d3 0%, #ffd9a0 100%);
-            color: #1a1a1a;
+            font-family: 'Be Vietnam Pro', sans-serif;
+            background: var(--cream);
+            color: var(--black);
             line-height: 1.6;
-            padding: 20px;
+            overflow-x: hidden;
         }
 
-        .header {
-            background: #fff;
-            border: 5px solid #000;
-            box-shadow: 12px 12px 0 #000;
-            padding: 20px;
-            margin-bottom: 40px;
+        /* Decorative floating shapes */
+        .shape {
+            position: absolute;
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        .shape-star {
+            width: 40px;
+            height: 40px;
+        }
+
+        .shape-diamond {
+            width: 30px;
+            height: 30px;
+            background: var(--coral);
+            transform: rotate(45deg);
+        }
+
+        .shape-cross {
+            width: 35px;
+            height: 35px;
+        }
+
+        /* Header */
+        header {
+            background: var(--cream);
+            padding: 15px 30px;
+            border-bottom: var(--border);
             display: flex;
             justify-content: space-between;
             align-items: center;
-            flex-wrap: wrap;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
         }
 
         .logo {
-            font-size: 28px;
-            font-weight: 900;
-            color: #000;
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 8px;
         }
 
         .logo span {
-            color: #ff6b35;
+            color: var(--coral);
         }
 
-        .header-badge {
-            background: #ff6b35;
-            color: #fff;
+        .nav-pills {
+            display: flex;
+            gap: 10px;
+        }
+
+        .pill {
             padding: 8px 16px;
-            border: 3px solid #000;
-            font-weight: 900;
-            font-size: 14px;
-            transform: rotate(-2deg);
-            box-shadow: 4px 4px 0 #000;
+            background: var(--cream);
+            border: 2px solid var(--black);
+            border-radius: 25px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+            text-decoration: none;
+            color: var(--black);
         }
 
+        .pill:hover {
+            background: var(--yellow);
+            transform: translateY(-2px);
+        }
+
+        .pill.new {
+            background: var(--coral);
+            color: white;
+        }
+
+        /* Hero Section */
         .hero {
+            padding: 60px 30px 80px;
             text-align: center;
-            margin-bottom: 60px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--yellow);
+            border: var(--border);
+            padding: 8px 20px;
+            border-radius: 30px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            margin-bottom: 25px;
+            box-shadow: 4px 4px 0 var(--black);
+        }
+
+        .hero h1 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            font-weight: 700;
+            line-height: 1.1;
+            margin-bottom: 20px;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero h1 .highlight {
+            color: var(--coral);
             position: relative;
         }
 
-        .sparkle {
-            font-size: 60px;
-            position: absolute;
-            animation: float 3s ease-in-out infinite;
+        .hero-subtitle {
+            font-size: 1.2rem;
+            color: #555;
+            max-width: 650px;
+            margin: 0 auto 40px;
         }
 
-        .sparkle-left {
-            top: -20px;
-            left: 10%;
+        /* Big Update Card */
+        .big-update-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px;
         }
 
-        .sparkle-right {
-            top: 20px;
-            right: 10%;
+        .big-update {
+            background: var(--cream-dark);
+            border: var(--border-thick);
+            border-radius: 20px;
+            padding: 35px;
+            box-shadow: var(--shadow);
+            position: relative;
         }
 
-        @keyframes float {
-            0%, 100% { transform: translateY(0px) rotate(0deg); }
-            50% { transform: translateY(-20px) rotate(10deg); }
+        .update-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 30px;
         }
 
-        h1 {
-            font-size: 72px;
-            font-weight: 900;
-            margin-bottom: 20px;
-            line-height: 1.1;
-            text-transform: uppercase;
-            color: #000;
-            text-shadow: 4px 4px 0 #ff6b35;
+        .update-icon {
+            width: 60px;
+            height: 60px;
+            background: var(--coral);
+            border: 3px solid var(--black);
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            box-shadow: 4px 4px 0 var(--black);
         }
 
-        .subtitle {
-            font-size: 20px;
-            color: #4a4a4a;
-            max-width: 700px;
-            margin: 0 auto 30px;
+        .update-title {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.8rem;
+            font-weight: 700;
         }
 
-        .container {
+        .update-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .update-card {
+            background: white;
+            border: var(--border);
+            border-radius: 15px;
+            padding: 25px;
+            transition: all 0.3s;
+        }
+
+        .update-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow);
+        }
+
+        .update-card .number {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 35px;
+            height: 35px;
+            background: var(--mint);
+            border: 2px solid var(--black);
+            border-radius: 50%;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+
+        .update-card h3 {
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+        }
+
+        .update-card .old-value {
+            text-decoration: line-through;
+            color: #999;
+            font-size: 0.9rem;
+        }
+
+        .update-card .new-value {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: var(--coral);
+            display: block;
+        }
+
+        .update-card p {
+            font-size: 0.95rem;
+            color: #555;
+        }
+
+        /* Section Styling */
+        section {
+            padding: 80px 30px;
+            position: relative;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--mint);
+            border: var(--border);
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-weight: 600;
+            font-size: 0.8rem;
+            margin-bottom: 15px;
+            box-shadow: 3px 3px 0 var(--black);
+        }
+
+        .section-title {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: clamp(1.8rem, 4vw, 2.8rem);
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+
+        .section-subtitle {
+            font-size: 1.1rem;
+            color: #666;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Tax Types Section */
+        .tax-types {
+            background: linear-gradient(180deg, var(--cream) 0%, #FEF3C7 100%);
+        }
+
+        .tax-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
             max-width: 1200px;
             margin: 0 auto;
         }
 
-        .main-box {
-            background: #fff9e6;
-            border: 5px solid #000;
-            box-shadow: 16px 16px 0 #000;
-            padding: 50px;
-            margin-bottom: 40px;
-            position: relative;
-        }
-
-        .section {
-            margin-bottom: 50px;
-        }
-
-        .section-title {
-            font-size: 36px;
-            font-weight: 900;
-            margin-bottom: 25px;
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            color: #000;
-        }
-
-        .icon {
-            font-size: 48px;
-            display: inline-block;
-        }
-
-        .big-update {
-            background: #ff6b35;
-            color: #fff;
-            border: 5px solid #000;
-            padding: 40px;
-            margin-bottom: 40px;
-            box-shadow: 8px 8px 0 #000;
-        }
-
-        .big-update h2 {
-            font-size: 28px;
-            margin-bottom: 20px;
-            text-transform: uppercase;
-        }
-
-        .highlight-box {
-            background: #fff;
-            border: 4px solid #000;
-            padding: 25px;
-            margin: 20px 0;
-            box-shadow: 6px 6px 0 rgba(0,0,0,0.2);
-            color: #000;
-        }
-
-        .highlight-number {
-            font-size: 64px;
-            font-weight: 900;
-            color: #ff6b35;
-            line-height: 1;
-        }
-
-        .tax-cards {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            margin: 30px 0;
-        }
-
         .tax-card {
-            background: #fff;
-            border: 4px solid #000;
-            padding: 30px;
-            box-shadow: 8px 8px 0 #000;
-            transition: transform 0.2s;
+            background: white;
+            border: var(--border-thick);
+            border-radius: 25px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: all 0.3s;
         }
 
         .tax-card:hover {
-            transform: translate(-4px, -4px);
-            box-shadow: 12px 12px 0 #000;
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-hover);
         }
 
-        .tax-card h3 {
-            font-size: 24px;
-            margin-bottom: 15px;
+        .tax-card-header {
+            padding: 25px;
             display: flex;
             align-items: center;
-            gap: 10px;
+            gap: 15px;
+            border-bottom: var(--border);
+        }
+
+        .tax-card-header.gtgt {
+            background: linear-gradient(135deg, #FEE2E2, #FECACA);
+        }
+
+        .tax-card-header.tncn {
+            background: linear-gradient(135deg, #E0E7FF, #C7D2FE);
+        }
+
+        .tax-card-header.other {
+            background: linear-gradient(135deg, #D1FAE5, #A7F3D0);
+        }
+
+        .tax-icon {
+            width: 55px;
+            height: 55px;
+            background: white;
+            border: 3px solid var(--black);
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            box-shadow: 3px 3px 0 var(--black);
+        }
+
+        .tax-card-header h3 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.4rem;
+            font-weight: 700;
+        }
+
+        .tax-card-header .abbr {
+            font-size: 0.85rem;
+            color: #666;
+            font-weight: 500;
+        }
+
+        .tax-card-body {
+            padding: 25px;
+        }
+
+        .tax-principle {
+            background: #FEF9C3;
+            border: 2px dashed var(--black);
+            border-radius: 12px;
+            padding: 15px;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+        }
+
+        .tax-principle .icon {
+            font-size: 1.3rem;
         }
 
         .formula-box {
-            background: #e8f5e9;
-            border: 3px dashed #000;
-            padding: 20px;
+            background: var(--black);
+            color: white;
+            border-radius: 12px;
+            padding: 18px;
             margin: 15px 0;
-            font-family: 'Courier New', monospace;
-            font-weight: bold;
-            font-size: 16px;
+            font-family: 'Space Grotesk', monospace;
+            font-size: 0.95rem;
+            text-align: center;
         }
 
-        .comparison-table {
-            background: #fff;
-            border: 4px solid #000;
+        .formula-box .highlight {
+            color: var(--yellow);
+            font-weight: 700;
+        }
+
+        .tax-example {
+            background: #F0FDF4;
+            border: 2px solid #22C55E;
+            border-radius: 12px;
+            padding: 15px;
+            margin-top: 15px;
+        }
+
+        .tax-example-header {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #16A34A;
+        }
+
+        /* Options Section */
+        .options-section {
+            background: var(--cream-dark);
+        }
+
+        .options-container {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .options-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .option-card {
+            background: white;
+            border: var(--border-thick);
+            border-radius: 25px;
             overflow: hidden;
-            margin: 30px 0;
+            box-shadow: var(--shadow);
+            position: relative;
         }
 
-        .comparison-table table {
-            width: 100%;
-            border-collapse: collapse;
+        .option-card.recommended::before {
+            content: '⭐ KHUYẾN NGHỊ';
+            position: absolute;
+            top: 15px;
+            right: -35px;
+            background: var(--coral);
+            color: white;
+            padding: 5px 40px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            transform: rotate(45deg);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
         }
 
-        .comparison-table th {
-            background: #000;
-            color: #fff;
-            padding: 20px;
-            text-align: left;
-            font-weight: 900;
-            font-size: 18px;
-            border: 2px solid #000;
+        .option-header {
+            padding: 25px;
+            text-align: center;
+            border-bottom: var(--border);
         }
 
-        .comparison-table td {
-            padding: 20px;
-            border: 2px solid #000;
-            font-size: 16px;
+        .option-header.a {
+            background: linear-gradient(135deg, #FEF3C7, #FDE68A);
         }
 
-        .comparison-table tr:nth-child(even) {
-            background: #f0f0f0;
+        .option-header.b {
+            background: linear-gradient(135deg, #DBEAFE, #BFDBFE);
         }
 
-        .example-box {
-            background: #e3f2fd;
-            border: 5px solid #000;
-            padding: 35px;
-            margin: 30px 0;
-            box-shadow: 10px 10px 0 #000;
+        .option-label {
+            display: inline-block;
+            background: white;
+            border: 2px solid var(--black);
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-weight: 700;
+            font-size: 0.85rem;
+            margin-bottom: 10px;
+            box-shadow: 2px 2px 0 var(--black);
         }
 
-        .example-box h3 {
-            font-size: 28px;
+        .option-header h3 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+
+        .option-body {
+            padding: 25px;
+        }
+
+        .option-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            margin-bottom: 18px;
+        }
+
+        .option-item .icon {
+            width: 35px;
+            height: 35px;
+            min-width: 35px;
+            background: var(--mint);
+            border: 2px solid var(--black);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1rem;
+        }
+
+        .option-item h4 {
+            font-size: 0.95rem;
+            font-weight: 600;
+            margin-bottom: 3px;
+        }
+
+        .option-item p {
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        .fit-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: #ECFDF5;
+            border: 2px solid #10B981;
+            padding: 10px 15px;
+            border-radius: 12px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            color: #059669;
+            margin-top: 10px;
+        }
+
+        /* Decision Rule Box */
+        .decision-rule {
+            background: white;
+            border: var(--border-thick);
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: var(--shadow);
+            text-align: center;
+        }
+
+        .rule-title {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 700;
             margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .rule-content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .rule-box {
+            padding: 20px 30px;
+            border-radius: 15px;
+            border: var(--border);
+            min-width: 200px;
+        }
+
+        .rule-box.profit-high {
+            background: #FEF3C7;
+        }
+
+        .rule-box.profit-low {
+            background: #DBEAFE;
+        }
+
+        .rule-box .condition {
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .rule-box .action {
+            font-size: 1.3rem;
+            font-weight: 800;
+            color: var(--coral);
+        }
+
+        .rule-arrow {
+            font-size: 2rem;
+        }
+
+        /* Case Study Section */
+        .case-study {
+            background: var(--cream);
+        }
+
+        .case-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .case-card {
+            background: white;
+            border: var(--border-thick);
+            border-radius: 25px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+
+        .case-header {
+            background: linear-gradient(135deg, #FEE2E2, #FECACA);
+            padding: 30px;
+            border-bottom: var(--border);
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .case-icon {
+            width: 80px;
+            height: 80px;
+            background: white;
+            border: 3px solid var(--black);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            box-shadow: 4px 4px 0 var(--black);
+        }
+
+        .case-info h3 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.6rem;
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+
+        .case-info p {
+            color: #666;
+        }
+
+        .case-body {
+            padding: 30px;
+        }
+
+        .case-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        .stat-box {
+            background: #F3F4F6;
+            border: 2px solid var(--black);
+            border-radius: 12px;
+            padding: 15px;
+            text-align: center;
+        }
+
+        .stat-box .label {
+            font-size: 0.85rem;
+            color: #666;
+            margin-bottom: 5px;
+        }
+
+        .stat-box .value {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--coral);
+        }
+
+        .calculation-table {
+            background: #FEF9C3;
+            border: var(--border);
+            border-radius: 15px;
+            overflow: hidden;
+            margin-bottom: 20px;
+        }
+
+        .calc-header {
+            background: var(--black);
+            color: white;
+            padding: 15px 20px;
+            font-weight: 700;
             display: flex;
             align-items: center;
             gap: 10px;
         }
 
-        .steps {
-            counter-reset: step-counter;
-            list-style: none;
+        .calc-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 15px 20px;
+            border-bottom: 1px solid #E5E7EB;
+            align-items: center;
         }
 
-        .steps li {
-            counter-increment: step-counter;
-            margin-bottom: 25px;
-            padding-left: 70px;
+        .calc-row:last-child {
+            border-bottom: none;
+        }
+
+        .calc-row .item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .calc-row .amount {
+            font-weight: 700;
+            font-size: 1.1rem;
+        }
+
+        .calc-row.total {
+            background: #FDE68A;
+            font-weight: 700;
+        }
+
+        .calc-row.total .amount {
+            font-size: 1.3rem;
+            color: var(--coral);
+        }
+
+        .case-note {
+            background: #ECFDF5;
+            border: 2px solid #10B981;
+            border-radius: 12px;
+            padding: 15px 20px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .case-note .icon {
+            font-size: 1.5rem;
+        }
+
+        .case-note p {
+            color: #059669;
+            font-weight: 500;
+        }
+
+        /* SOP Section */
+        .sop-section {
+            background: linear-gradient(180deg, #FEF3C7 0%, var(--cream) 100%);
+        }
+
+        .sop-container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .timeline {
             position: relative;
-            font-size: 18px;
         }
 
-        .steps li::before {
-            content: counter(step-counter);
+        .timeline-phase {
+            position: relative;
+            padding-left: 80px;
+            margin-bottom: 50px;
+        }
+
+        .timeline-phase:last-child {
+            margin-bottom: 0;
+        }
+
+        .phase-number {
             position: absolute;
             left: 0;
-            top: -5px;
-            background: #000;
-            color: #fff;
-            width: 50px;
-            height: 50px;
+            top: 0;
+            width: 60px;
+            height: 60px;
+            background: var(--coral);
+            border: 3px solid var(--black);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-weight: 900;
-            font-size: 24px;
-            border: 4px solid #fff;
-            box-shadow: 0 0 0 4px #000;
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: white;
+            box-shadow: 4px 4px 0 var(--black);
+            z-index: 1;
         }
 
-        .action-button {
-            background: #4caf50;
-            color: #fff;
-            border: 5px solid #000;
-            padding: 20px 40px;
-            font-size: 20px;
-            font-weight: 900;
-            cursor: pointer;
-            box-shadow: 8px 8px 0 #000;
-            transition: all 0.2s;
-            display: inline-block;
-            text-decoration: none;
-            text-transform: uppercase;
+        .timeline-phase::before {
+            content: '';
+            position: absolute;
+            left: 28px;
+            top: 60px;
+            width: 4px;
+            height: calc(100% + 50px);
+            background: var(--black);
         }
 
-        .action-button:hover {
-            transform: translate(-4px, -4px);
-            box-shadow: 12px 12px 0 #000;
+        .timeline-phase:last-child::before {
+            display: none;
         }
 
-        .badge {
-            background: #ffd54f;
-            border: 3px solid #000;
-            padding: 5px 12px;
-            font-weight: 900;
-            font-size: 14px;
-            display: inline-block;
-            transform: rotate(-2deg);
+        .phase-content {
+            background: white;
+            border: var(--border-thick);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
         }
 
-        .warning-box {
-            background: #fff3cd;
-            border: 4px solid #ff6b35;
+        .phase-header {
+            padding: 20px 25px;
+            border-bottom: var(--border);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .phase-header.prep {
+            background: linear-gradient(135deg, #E0E7FF, #C7D2FE);
+        }
+
+        .phase-header.run {
+            background: linear-gradient(135deg, #D1FAE5, #A7F3D0);
+        }
+
+        .phase-header.report {
+            background: linear-gradient(135deg, #FEE2E2, #FECACA);
+        }
+
+        .phase-header h3 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.3rem;
+            font-weight: 700;
+        }
+
+        .phase-body {
             padding: 25px;
-            margin: 20px 0;
-            border-left-width: 15px;
         }
 
-        .warning-box strong {
-            color: #ff6b35;
-            font-size: 18px;
-        }
-
-        .checklist {
+        .step-list {
             list-style: none;
         }
 
-        .checklist li {
-            padding: 15px;
-            margin-bottom: 10px;
-            background: #fff;
-            border: 3px solid #000;
-            position: relative;
-            padding-left: 50px;
+        .step-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            margin-bottom: 18px;
+            padding-bottom: 18px;
+            border-bottom: 1px dashed #E5E7EB;
         }
 
-        .checklist li::before {
-            content: "✓";
-            position: absolute;
-            left: 15px;
-            font-size: 24px;
-            font-weight: 900;
-            color: #4caf50;
+        .step-item:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border-bottom: none;
         }
 
-        .footer {
-            text-align: center;
-            margin-top: 60px;
-            padding: 40px;
-            background: #000;
-            color: #fff;
-            border: 5px solid #000;
-            box-shadow: 12px 12px 0 #ff6b35;
+        .step-icon {
+            width: 45px;
+            height: 45px;
+            min-width: 45px;
+            background: var(--yellow);
+            border: 2px solid var(--black);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            box-shadow: 2px 2px 0 var(--black);
         }
 
-        .plane-icon {
-            font-size: 60px;
+        .step-content h4 {
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        .step-content p {
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        .step-content .code {
             display: inline-block;
-            animation: fly 4s ease-in-out infinite;
+            background: #F3F4F6;
+            border: 1px solid #D1D5DB;
+            padding: 2px 8px;
+            border-radius: 5px;
+            font-family: monospace;
+            font-size: 0.85rem;
+            margin-top: 5px;
         }
 
-        @keyframes fly {
-            0%, 100% { transform: translateX(0) rotate(0deg); }
-            50% { transform: translateX(30px) rotate(5deg); }
+        /* Action Plan Section */
+        .action-section {
+            background: var(--black);
+            color: white;
         }
 
+        .action-section .section-title {
+            color: white;
+        }
+
+        .action-section .section-subtitle {
+            color: #9CA3AF;
+        }
+
+        .action-section .section-badge {
+            background: var(--coral);
+            color: white;
+            border-color: var(--coral);
+        }
+
+        .action-container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .action-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .action-card {
+            background: #2D2D2D;
+            border: 3px solid white;
+            border-radius: 20px;
+            padding: 25px;
+            transition: all 0.3s;
+        }
+
+        .action-card:hover {
+            transform: translateY(-5px);
+            background: #3D3D3D;
+        }
+
+        .action-number {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: var(--coral);
+            border: 2px solid white;
+            border-radius: 50%;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+
+        .action-card h3 {
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: var(--yellow);
+        }
+
+        .action-card p {
+            font-size: 0.95rem;
+            color: #D1D5DB;
+            line-height: 1.7;
+        }
+
+        .action-cta {
+            margin-top: 50px;
+            text-align: center;
+        }
+
+        .cta-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: var(--coral);
+            color: white;
+            border: 3px solid white;
+            padding: 18px 40px;
+            font-size: 1.2rem;
+            font-weight: 700;
+            border-radius: 15px;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: 6px 6px 0 rgba(255,255,255,0.3);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 8px 8px 0 rgba(255,255,255,0.3);
+            background: var(--coral-light);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--cream-dark);
+            border-top: var(--border);
+            padding: 40px 30px;
+            text-align: center;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+
+        .footer-link {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--black);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        .footer-link:hover {
+            color: var(--coral);
+        }
+
+        .footer-text {
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        /* Decorative Elements */
+        .star-decor {
+            display: inline-block;
+            animation: spin 8s linear infinite;
+        }
+
+        @keyframes spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        .float-anim {
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        /* Responsive */
         @media (max-width: 768px) {
-            h1 {
-                font-size: 42px;
+            header {
+                flex-direction: column;
+                gap: 15px;
             }
 
-            .main-box {
-                padding: 25px;
-            }
-
-            .section-title {
-                font-size: 28px;
-            }
-
-            .tax-cards {
-                grid-template-columns: 1fr;
-            }
-
-            .header {
-                text-align: center;
+            .nav-pills {
+                flex-wrap: wrap;
                 justify-content: center;
             }
 
-            .sparkle {
-                font-size: 40px;
+            .hero {
+                padding: 40px 20px 60px;
             }
 
-            .comparison-table {
-                overflow-x: auto;
+            .tax-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .options-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .rule-content {
+                flex-direction: column;
+            }
+
+            .rule-arrow {
+                transform: rotate(90deg);
+            }
+
+            .timeline-phase {
+                padding-left: 50px;
+            }
+
+            .phase-number {
+                width: 40px;
+                height: 40px;
+                font-size: 1.1rem;
+            }
+
+            .timeline-phase::before {
+                left: 18px;
+                top: 40px;
+            }
+
+            .case-header {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .case-stats {
+                grid-template-columns: repeat(2, 1fr);
             }
         }
 
-        .pill {
-            display: inline-block;
-            padding: 8px 16px;
-            background: #fff;
-            border: 3px solid #000;
-            border-radius: 25px;
-            font-weight: 900;
-            margin: 5px;
-            font-size: 14px;
+        /* Comparison highlight */
+        .comparison-note {
+            background: #FEF3C7;
+            border: 2px dashed #F59E0B;
+            border-radius: 10px;
+            padding: 12px 15px;
+            margin-top: 15px;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
         }
 
-        .calculation-line {
-            background: #f5f5f5;
-            border-left: 5px solid #ff6b35;
-            padding: 15px 20px;
-            margin: 10px 0;
-            font-size: 18px;
-            font-weight: bold;
+        .comparison-note .old {
+            text-decoration: line-through;
+            color: #999;
         }
 
-        .total-line {
-            background: #4caf50;
-            color: #fff;
-            border: 4px solid #000;
-            padding: 20px;
-            font-size: 22px;
-            font-weight: 900;
-            margin-top: 20px;
-            box-shadow: 6px 6px 0 #000;
+        .comparison-note .new {
+            color: #16A34A;
+            font-weight: 700;
+        }
+
+        /* Visual icons as SVG */
+        .icon-svg {
+            width: 24px;
+            height: 24px;
         }
     </style>
 </head>
 <body>
     <!-- Header -->
-    <div class="header">
-        <div class="logo">Thuế<span>HộKinhDoanh</span>.vn</div>
-        <div class="header-badge">📢 CẬP NHẬT 2026</div>
-    </div>
+    <header>
+        <div class="logo">
+            <svg class="star-decor" width="30" height="30" viewBox="0 0 30 30" fill="none">
+                <path d="M15 0L18.5 11.5L30 15L18.5 18.5L15 30L11.5 18.5L0 15L11.5 11.5L15 0Z" fill="#FF6B6B"/>
+            </svg>
+            Thuế<span>HKD</span>2026
+        </div>
+        <nav class="nav-pills">
+            <a href="#big-update" class="pill new">🔥 Big Update</a>
+            <a href="#tax-types" class="pill">💰 Các loại thuế</a>
+            <a href="#options" class="pill">⚖️ So sánh</a>
+            <a href="#case-study" class="pill">📊 Ví dụ</a>
+            <a href="#action" class="pill">🚀 Hành động</a>
+        </nav>
+    </header>
 
-    <div class="container">
-        <!-- Hero Section -->
-        <div class="hero">
-            <div class="sparkle sparkle-left">✨</div>
-            <div class="sparkle sparkle-right">💫</div>
-            <h1>Cải Cách Thuế<br>Hộ Kinh Doanh 2026</h1>
-            <p class="subtitle">Thay đổi mang tính "cách mạng" trong 10 năm qua - Hiểu đúng, tính đúng, tiết kiệm hàng triệu đồng!</p>
+    <!-- Hero Section -->
+    <section class="hero" id="big-update">
+        <svg class="shape shape-star float-anim" style="top: 20%; left: 5%;" width="50" height="50" viewBox="0 0 50 50">
+            <path d="M25 0L31 19L50 25L31 31L25 50L19 31L0 25L19 19L25 0Z" fill="#FF6B6B"/>
+        </svg>
+        <svg class="shape shape-star float-anim" style="top: 30%; right: 8%; animation-delay: 1s;" width="35" height="35" viewBox="0 0 35 35">
+            <path d="M17.5 0L21.5 13.5L35 17.5L21.5 21.5L17.5 35L13.5 21.5L0 17.5L13.5 13.5L17.5 0Z" fill="#4ECDC4"/>
+        </svg>
+        <div class="shape shape-cross float-anim" style="bottom: 20%; left: 10%; animation-delay: 0.5s;">
+            <svg width="40" height="40" viewBox="0 0 40 40">
+                <rect x="15" y="0" width="10" height="40" fill="#4ECDC4"/>
+                <rect x="0" y="15" width="40" height="10" fill="#4ECDC4"/>
+            </svg>
         </div>
 
-        <!-- Main Content Box -->
-        <div class="main-box">
-            <!-- Section I: Big Update -->
-            <div class="section">
-                <div class="big-update">
-                    <h2><span class="icon">🚀</span> PHẦN I. ĐIỂM TIN QUAN TRỌNG NHẤT</h2>
-                    <p style="font-size: 20px; margin-bottom: 25px;">Thay đổi mang tính "cách mạng" nhất trong 10 năm qua đối với Hộ kinh doanh:</p>
+        <div class="hero-badge">
+            📢 BÁO CÁO CHUYÊN ĐỀ • Theo Công văn 18491/BTC-CST & Dự thảo Luật Quản lý thuế
+        </div>
+        <h1>
+            Cải Cách <span class="highlight">Thuế HKD</span><br>
+            Năm 2026
+        </h1>
+        <p class="hero-subtitle">
+            Hướng dẫn thực thi quy định thuế mới dành cho HKD có doanh thu từ <strong>500 triệu đến 3 tỷ đồng/năm</strong>.
+        </p>
 
-                    <div class="highlight-box">
-                        <div class="highlight-number">500 Triệu</div>
-                        <p style="font-size: 20px; margin-top: 10px;"><strong>1️⃣ Nâng hạn mức miễn thuế:</strong> Tăng từ 100 triệu lên <strong>500 triệu đồng/năm</strong></p>
+        <div class="big-update-container">
+            <div class="big-update">
+                <div class="update-header">
+                    <div class="update-icon">🎯</div>
+                    <div class="update-title">ĐIỂM TIN QUAN TRỌNG (Công văn 18491/BTC-CST)</div>
+                </div>
+                <div class="update-grid">
+                    <div class="update-card">
+                        <div class="number">1</div>
+                        <h3>📈 Nâng mức miễn thuế</h3>
+                        <span class="old-value">Cũ: 100 triệu/năm</span>
+                        <span class="new-value">500 triệu/năm</span>
+                        <p>Dưới 500 triệu: Miễn thuế hoàn toàn.</p>
                     </div>
-
-                    <div class="highlight-box">
-                        <p style="font-size: 18px;"><strong>2️⃣ Cơ chế tính thuế MỚI:</strong></p>
-                        <ul style="margin-left: 30px; margin-top: 15px; font-size: 17px;">
-                            <li style="margin-bottom: 12px;">📊 <strong>Dưới 500 triệu/năm:</strong> Miễn hoàn toàn Thuế GTGT và Thuế TNCN</li>
-                            <li>📈 <strong>Trên 500 triệu/năm:</strong> Chỉ tính thuế trên phần <strong>vượt ngưỡng</strong> (Doanh thu - 500 triệu)</li>
-                        </ul>
+                    <div class="update-card">
+                        <div class="number">2</div>
+                        <h3>🎯 Đối tượng tác động chính</h3>
+                        <span class="new-value">500tr - 3 tỷ/năm</span>
+                        <p>HKD có doanh thu trong khoảng này phải nộp thuế GTGT và TNCN theo cơ chế mới.</p>
                     </div>
-
-                    <div class="highlight-box">
-                        <p style="font-size: 18px;"><strong>3️⃣ Lựa chọn phương pháp tính thuế:</strong></p>
-                        <p style="margin-top: 10px; font-size: 17px;">HKD được quyền chọn nộp thuế theo tỷ lệ doanh thu (cũ) hoặc theo lợi nhuận thực tế (mới) 🎯</p>
+                    <div class="update-card">
+                        <div class="number">3</div>
+                        <h3>✅ Được chọn cách tính TNCN</h3>
+                        <span class="new-value">2 phương án</span>
+                        <p>Phương án A: Khoán % doanh thu. Phương án B: 15% lợi nhuận thực tế.</p>
                     </div>
                 </div>
             </div>
+        </div>
+    </section>
 
-            <!-- Section II: Tax Types -->
-            <div class="section">
-                <h2 class="section-title"><span class="icon">💰</span> PHẦN II. CÁC LOẠI THUẾ & PHÍ PHẢI NỘP</h2>
-                <p style="font-size: 18px; margin-bottom: 25px; font-weight: bold;">Từ ngày 01/01/2026</p>
+    <!-- Tax Types Section -->
+    <section class="tax-types" id="tax-types">
+        <div class="section-header">
+            <div class="section-badge">💰 PHẦN II</div>
+            <h2 class="section-title">Các loại Thuế & Phí phải nộp</h2>
+            <p class="section-subtitle">Từ 01/01/2026, Hộ kinh doanh cần biết những loại thuế phí sau</p>
+        </div>
 
-                <div class="tax-cards">
-                    <div class="tax-card">
-                        <h3><span style="font-size: 32px;">📊</span> Thuế GTGT</h3>
-                        <p style="margin-bottom: 15px;"><strong>Nguyên tắc:</strong> Hộ kinh doanh <strong>KHÔNG</strong> được khấu trừ thuế đầu vào. Tính theo phương pháp trực tiếp.</p>
-                        <div class="formula-box">
-                            Thuế GTGT = (Doanh thu - 500 triệu) × Tỷ lệ ngành nghề
-                        </div>
-                        <div class="badge">VÍ DỤ</div>
-                        <p style="margin-top: 10px;">F&B/Thương mại: Tỷ lệ 3% hoặc 1% trên phần vượt</p>
+        <div class="tax-grid">
+            <!-- GTGT Card -->
+            <div class="tax-card">
+                <div class="tax-card-header gtgt">
+                    <div class="tax-icon">🏷️</div>
+                    <div>
+                        <h3>Thuế GTGT</h3>
+                        <span class="abbr">Giá trị gia tăng</span>
                     </div>
-
-                    <div class="tax-card">
-                        <h3><span style="font-size: 32px;">🎯</span> Thuế TNCN</h3>
-                        <p style="margin-bottom: 15px; color: #ff6b35; font-weight: bold;">CÓ 2 LỰA CHỌN - Đây là điểm mấu chốt!</p>
-
-                        <div style="margin-bottom: 20px;">
-                            <div class="badge" style="background: #4caf50; color: #fff;">LỰA CHỌN A</div>
-                            <p style="margin-top: 10px;"><strong>Truyền thống:</strong> Tính % trên Doanh thu vượt ngưỡng</p>
-                            <p style="font-size: 14px; color: #666;">✅ Phù hợp: Ngành lãi cao (F&B, Dịch vụ, Cho thuê)</p>
-                        </div>
-
+                </div>
+                <div class="tax-card-body">
+                    <div class="tax-principle">
+                        <span class="icon">⚠️</span>
                         <div>
-                            <div class="badge" style="background: #2196f3; color: #fff;">LỰA CHỌN B</div>
-                            <p style="margin-top: 10px;"><strong>Mới - Kê khai:</strong> Tính 15% trên Lợi nhuận vượt ngưỡng</p>
-                            <div class="formula-box" style="background: #e3f2fd;">
-                                Thuế TNCN = (Doanh thu - 500tr - Chi phí) × 15%
+                            <strong>Nguyên tắc quan trọng:</strong> Thuế GTGT tính trên <strong>TỔNG DOANH THU</strong> (không trừ mức miễn giảm 500tr).
+                        </div>
+                    </div>
+                    <div class="formula-box">
+                        Thuế GTGT = <span class="highlight">Tổng Doanh Thu</span> × Tỷ lệ ngành
+                    </div>
+                    <div class="tax-example">
+                        <div class="tax-example-header">
+                            <span>📋</span> Tỷ lệ theo Thông tư 40/2021/TT-BTC
+                        </div>
+                        <p>• Phân phối hàng hóa: <strong>1%</strong><br>
+                        • F&B (Ăn uống): <strong>3%</strong><br>
+                        • Dịch vụ, Xây dựng: <strong>5%</strong></p>
+                    </div>
+                    <div class="tax-example" style="margin-top: 10px;">
+                        <div class="tax-example-header">
+                            <span>🍜</span> Ví dụ: Quán ăn F&B (DT 600tr/năm)
+                        </div>
+                        <p>Thuế GTGT = 600tr × <strong>3%</strong> = <strong>18 triệu đồng</strong></p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TNCN Card -->
+            <div class="tax-card">
+                <div class="tax-card-header tncn">
+                    <div class="tax-icon">👤</div>
+                    <div>
+                        <h3>Thuế TNCN</h3>
+                        <span class="abbr">Thu nhập cá nhân</span>
+                    </div>
+                </div>
+                <div class="tax-card-body">
+                    <div class="tax-principle">
+                        <span class="icon">🎯</span>
+                        <div>
+                            <strong>Điểm mấu chốt:</strong> Được <strong>CHỌN</strong> 1 trong 2 cách tính. Đây là cơ hội tối ưu thuế!
+                        </div>
+                    </div>
+                    <div style="margin-top: 15px;">
+                        <div style="background: #FEF3C7; padding: 15px; border-radius: 10px; margin-bottom: 10px; border-left: 4px solid #F59E0B;">
+                            <strong>🅰️ Phương án A:</strong> Không kê khai (Khoán/Ấn định)<br>
+                            <small style="color: #666;">Công thức: (Tổng DT - 500tr) × Tỷ lệ TNCN ngành</small><br>
+                            <small style="color: #888; font-style: italic;">Tỷ lệ TT40: Phân phối 0.5%; Dịch vụ 2%; F&B 1.5%</small>
+                        </div>
+                        <div style="background: #DBEAFE; padding: 15px; border-radius: 10px; border-left: 4px solid #3B82F6;">
+                            <strong>🅱️ Phương án B:</strong> Kê khai (Sổ sách kế toán)<br>
+                            <small style="color: #666;">Công thức: (Doanh thu - Chi phí hợp lý) × 15%</small><br>
+                            <small style="color: #888; font-style: italic;">Tính trên lợi nhuận thực tế</small>
+                        </div>
+                    </div>
+                    <div class="tax-example">
+                        <div class="tax-example-header">
+                            <span>💡</span> Lời khuyên cốt lõi
+                        </div>
+                        <p>Quy định mới có xu hướng <strong>khuyến khích Phương án A</strong> vì được trừ ngay 500tr khi tính TNCN và thuế suất thấp (0.5%-1.5%).</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Other Fees Card -->
+            <div class="tax-card">
+                <div class="tax-card-header other">
+                    <div class="tax-icon">📋</div>
+                    <div>
+                        <h3>Phí khác</h3>
+                        <span class="abbr">Bắt buộc phải đóng</span>
+                    </div>
+                </div>
+                <div class="tax-card-body">
+                    <div style="margin-bottom: 15px; padding: 15px; background: #ECFDF5; border-radius: 10px; border: 2px solid #10B981;">
+                        <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 5px;">
+                            <span style="font-size: 1.3rem;">🎉</span>
+                            <strong style="color: #059669;">TIN VUI!</strong>
+                        </div>
+                        <p><strong>Lệ phí môn bài:</strong> MIỄN PHÍ từ 2026<br><small style="color: #666;">(Theo Nghị quyết 198/2025/QH15)</small></p>
+                    </div>
+                    <div style="margin-bottom: 15px; padding: 15px; background: #F3F4F6; border-radius: 10px;">
+                        <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 5px;">
+                            <span style="font-size: 1.3rem;">🏥</span>
+                            <strong>BHXH Bắt buộc</strong>
+                        </div>
+                        <p>22% mức thu nhập chọn đóng<br><small style="color: #666;">Tối thiểu ~330.000đ/tháng</small></p>
+                    </div>
+                    <div style="padding: 15px; background: #F3F4F6; border-radius: 10px;">
+                        <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 5px;">
+                            <span style="font-size: 1.3rem;">💊</span>
+                            <strong>BHYT</strong>
+                        </div>
+                        <p>4.5% mức lương cơ sở<br><small style="color: #666;">~100.000 - 200.000đ/tháng</small></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Options Comparison Section -->
+    <section class="options-section" id="options">
+        <div class="section-header">
+            <div class="section-badge" style="background: var(--purple); color: white; border-color: var(--purple);">⚖️ PHẦN III</div>
+            <h2 class="section-title">Nên chọn cách tính nào?</h2>
+            <p class="section-subtitle">So sánh chi tiết 2 phương án để tối ưu thuế TNCN</p>
+        </div>
+
+        <div class="options-container">
+            <div class="options-grid">
+                <!-- Option A -->
+                <div class="option-card recommended">
+                    <div class="option-header a">
+                        <span class="option-label">🅰️ PHƯƠNG ÁN A</span>
+                        <h3>Không kê khai (Khoán)</h3>
+                    </div>
+                    <div class="option-body">
+                        <div class="option-item">
+                            <div class="icon">📝</div>
+                            <div>
+                                <h4>Bản chất</h4>
+                                <p>Được trừ 500tr, chỉ tính thuế trên phần vượt</p>
                             </div>
-                            <p style="font-size: 14px; color: #666;">⚠️ Điều kiện: Phải có sổ sách, hóa đơn đầy đủ</p>
-                            <p style="font-size: 14px; color: #666;">✅ Phù hợp: Ngành lãi mỏng (Tạp hóa, điện máy)</p>
+                        </div>
+                        <div class="option-item">
+                            <div class="icon">📂</div>
+                            <div>
+                                <h4>Hồ sơ</h4>
+                                <p>Đơn giản, không cần sổ sách kế toán</p>
+                            </div>
+                        </div>
+                        <div class="option-item">
+                            <div class="icon">🧮</div>
+                            <div>
+                                <h4>Công thức</h4>
+                                <p>Thuế = (DT - 500tr) × Tỷ lệ %</p>
+                                <small style="color: #888;">VD: F&B 1.5%, Phân phối 0.5%</small>
+                            </div>
+                        </div>
+                        <div class="fit-badge">
+                            ✅ Khuyến nghị cho HKD 500tr - 3 tỷ
+                        </div>
+                        <div style="margin-top: 10px; padding: 10px; background: #FEF3C7; border-radius: 8px; font-size: 0.9rem;">
+                            <strong>Ưu điểm:</strong> Thuế suất thấp (0.5%-2%) và được trừ ngay 500tr
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Option B -->
+                <div class="option-card">
+                    <div class="option-header b">
+                        <span class="option-label">🅱️ PHƯƠNG ÁN B</span>
+                        <h3>Kê khai (Sổ sách)</h3>
+                    </div>
+                    <div class="option-body">
+                        <div class="option-item">
+                            <div class="icon" style="background: #DBEAFE;">📊</div>
+                            <div>
+                                <h4>Bản chất</h4>
+                                <p>Tính trên lợi nhuận thực tế (DT - Chi phí)</p>
+                            </div>
+                        </div>
+                        <div class="option-item">
+                            <div class="icon" style="background: #DBEAFE;">📑</div>
+                            <div>
+                                <h4>Hồ sơ</h4>
+                                <p>Phức tạp, cần lưu toàn bộ hóa đơn đầu vào</p>
+                            </div>
+                        </div>
+                        <div class="option-item">
+                            <div class="icon" style="background: #DBEAFE;">🧮</div>
+                            <div>
+                                <h4>Công thức</h4>
+                                <p>Thuế = (DT - Chi phí) × 15%</p>
+                                <small style="color: #888;">Không được trừ 500tr</small>
+                            </div>
+                        </div>
+                        <div class="fit-badge" style="background: #EFF6FF; border-color: #3B82F6; color: #2563EB;">
+                            ⚠️ Chỉ lợi khi lỗ hoặc lãi cực thấp
+                        </div>
+                        <div style="margin-top: 10px; padding: 10px; background: #DBEAFE; border-radius: 8px; font-size: 0.9rem;">
+                            <strong>Khi nào chọn:</strong> Làm ăn thua lỗ hoặc biên lãi < 2.7%
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Decision Rule -->
+            <div class="decision-rule">
+                <div class="rule-title">
+                    <span style="font-size: 1.8rem;">💡</span>
+                    LỜI KHUYÊN CỐT LÕI
+                </div>
+                <div class="rule-content" style="flex-direction: column; gap: 15px;">
+                    <div class="rule-box profit-high" style="min-width: 100%; text-align: left; padding: 20px;">
+                        <div class="condition" style="font-size: 1.1rem; margin-bottom: 10px;">Quy định mới <strong>khuyến khích Phương án A</strong> cho HKD 500tr - 3 tỷ vì:</div>
+                        <div style="font-size: 0.95rem; color: #666;">
+                            ✅ Được trừ ngay 500 triệu khi tính thuế TNCN<br>
+                            ✅ Thuế suất TNCN thấp (0.5% - 1.5%) tính trên phần vượt<br>
+                            ✅ Phương án B chỉ lợi khi <strong>lỗ hoặc biên lãi < 2.7%</strong>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Case Study Section -->
+    <section class="case-study" id="case-study">
+        <div class="section-header">
+            <div class="section-badge" style="background: var(--orange); color: white; border-color: var(--orange);">📊 PHẦN III</div>
+            <h2 class="section-title">Ví dụ thực tế & So sánh</h2>
+            <p class="section-subtitle">2 trường hợp điển hình giúp bạn cân nhắc lựa chọn phương án tối ưu</p>
+        </div>
+
+        <div class="case-container">
+            <!-- Case Study 1: Quán Cafe -->
+            <div class="case-card" style="margin-bottom: 40px;">
+                <div class="case-header">
+                    <div class="case-icon">☕</div>
+                    <div class="case-info">
+                        <h3>Ví dụ 1: Quán Cafe ABC</h3>
+                        <p>Ngành F&B (GTGT 3%, TNCN 1.5%) • Lãi ròng 20% = 120 triệu</p>
+                    </div>
+                </div>
+                <div class="case-body">
+                    <div class="case-stats">
+                        <div class="stat-box">
+                            <div class="label">Doanh thu/năm</div>
+                            <div class="value">600 triệu</div>
+                        </div>
+                        <div class="stat-box">
+                            <div class="label">Lợi nhuận ròng</div>
+                            <div class="value">120 triệu</div>
+                        </div>
+                        <div class="stat-box">
+                            <div class="label">Biên lợi nhuận</div>
+                            <div class="value" style="color: #16A34A;">20%</div>
+                        </div>
+                        <div class="stat-box">
+                            <div class="label">Phần vượt 500tr</div>
+                            <div class="value">100 triệu</div>
                         </div>
                     </div>
 
-                    <div class="tax-card">
-                        <h3><span style="font-size: 32px;">📋</span> Các khoản phí khác</h3>
-                        <p style="margin-bottom: 15px;"><strong>Bắt buộc nộp:</strong></p>
-                        <ul style="margin-left: 20px;">
-                            <li style="margin-bottom: 10px;"><strong>Lệ phí môn bài:</strong> Dự kiến <span class="pill" style="background: #4caf50; color: #fff; border-color: #2e7d32;">MIỄN PHÍ</span> từ 2026</li>
-                            <li style="margin-bottom: 10px;"><strong>BHXH bắt buộc:</strong> 22% (~330k/tháng)</li>
-                            <li><strong>BHYT:</strong> 4.5% (~100-200k/tháng)</li>
-                        </ul>
+                    <!-- Comparison Table -->
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-bottom: 20px;">
+                        <div class="calculation-table">
+                            <div class="calc-header" style="background: #F59E0B;">
+                                <span>🅰️</span> PHƯƠNG ÁN A (Không kê khai)
+                            </div>
+                            <div class="calc-row">
+                                <div class="item"><span>🏷️</span><span>Thuế GTGT</span></div>
+                                <div class="amount">600tr × 3% = 18tr</div>
+                            </div>
+                            <div class="calc-row">
+                                <div class="item"><span>👤</span><span>Thuế TNCN</span></div>
+                                <div class="amount">(600-500)tr × 1.5% = 1.5tr</div>
+                            </div>
+                            <div class="calc-row total">
+                                <div class="item"><strong>TỔNG THUẾ</strong></div>
+                                <div class="amount" style="color: #16A34A;">19.500.000đ</div>
+                            </div>
+                        </div>
+                        <div class="calculation-table" style="background: #DBEAFE;">
+                            <div class="calc-header" style="background: #2563EB;">
+                                <span>🅱️</span> PHƯƠNG ÁN B (Kê khai)
+                            </div>
+                            <div class="calc-row">
+                                <div class="item"><span>🏷️</span><span>Thuế GTGT</span></div>
+                                <div class="amount">600tr × 3% = 18tr</div>
+                            </div>
+                            <div class="calc-row">
+                                <div class="item"><span>👤</span><span>Thuế TNCN</span></div>
+                                <div class="amount">120tr (lãi) × 15% = 18tr</div>
+                            </div>
+                            <div class="calc-row total" style="background: #93C5FD;">
+                                <div class="item"><strong>TỔNG THUẾ</strong></div>
+                                <div class="amount" style="color: #DC2626;">36.000.000đ</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="case-note">
+                        <span class="icon">👉</span>
+                        <p><strong>KẾT LUẬN: Chọn Phương án A!</strong> Tiết kiệm <strong style="color: #16A34A;">16.5 triệu/năm</strong>. Doanh thu vừa vượt 500tr nên phần tính thuế TNCN của PA A rất thấp (chỉ trên 100tr vượt).</p>
                     </div>
                 </div>
             </div>
 
-            <!-- Section III: Optimization -->
-            <div class="section">
-                <h2 class="section-title"><span class="icon">🧮</span> PHẦN III. BÀI TOÁN TỐI ƯU</h2>
-                <p style="font-size: 20px; font-weight: bold; margin-bottom: 20px;">Nên chọn cách tính nào? Sử dụng "Quy tắc 10%" 👇</p>
-
-                <div class="comparison-table">
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Tiêu chí</th>
-                                <th style="background: #4caf50;">Phương án A: Tỷ lệ trên Doanh thu</th>
-                                <th style="background: #2196f3;">Phương án B: 15% trên Lợi nhuận</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td><strong>Bản chất</strong></td>
-                                <td>Nộp khoán theo % doanh thu bất kể lãi lỗ</td>
-                                <td>Nộp theo thực tế làm ăn (Thu bù chi)</td>
-                            </tr>
-                            <tr>
-                                <td><strong>Hồ sơ</strong></td>
-                                <td>✅ Đơn giản</td>
-                                <td>⚠️ Phức tạp (Cần lưu hóa đơn đầu vào)</td>
-                            </tr>
-                            <tr>
-                                <td><strong>Khi nào chọn?</strong></td>
-                                <td>Khi <strong>Biên lợi nhuận > 10%</strong><br>(VD: Cafe lãi 30%)</td>
-                                <td>Khi <strong>Biên lợi nhuận < 10%</strong><br>(VD: Bán thẻ cào, tạp hóa lãi 5%)</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-
-                <div class="warning-box">
-                    <strong>💡 MẸO:</strong> Nếu bạn bán hàng với tỷ suất lãi trên 10% → Chọn phương án A đơn giản hơn. Nếu bán hàng lãi mỏng dưới 10% → Chọn phương án B để được trừ chi phí!
-                </div>
-            </div>
-
-            <!-- Section IV: Case Study -->
-            <div class="section">
-                <h2 class="section-title"><span class="icon">☕</span> PHẦN IV. VÍ DỤ THỰC TẾ</h2>
-
-                <div class="example-box">
-                    <h3><span style="font-size: 36px;">☕</span> Case Study: Quán Cafe</h3>
-
-                    <div style="background: #fff; padding: 20px; border: 3px solid #000; margin: 20px 0;">
-                        <p style="font-size: 18px; margin-bottom: 15px;"><strong>📍 Thông tin cơ bản:</strong></p>
-                        <div class="pill">🏪 Ngành: F&B</div>
-                        <div class="pill">💵 Doanh thu: 50 triệu/tháng</div>
-                        <div class="pill">📅 Tổng năm: 600 triệu</div>
-                        <div class="pill">📊 Lãi ước tính: 20%</div>
-                    </div>
-
-                    <p style="font-size: 18px; font-weight: bold; margin: 25px 0 15px 0;">💰 Chi phí ước tính năm 2026:</p>
-                    <p style="margin-bottom: 15px;">Doanh thu chịu thuế: <strong>100 triệu đồng</strong> (Phần vượt 500 triệu)</p>
-
-                    <div class="calculation-line">
-                        <strong>1️⃣ Thuế GTGT (3%):</strong> 100 triệu × 3% = <span style="color: #ff6b35;">3.000.000 đ</span>
-                    </div>
-
-                    <div class="calculation-line">
-                        <strong>2️⃣ Thuế TNCN (15% trên lãi):</strong> 100 triệu × 20% × 15% = <span style="color: #ff6b35;">300.000 đ</span>
-                        <br><span style="font-size: 14px; color: #666;">💡 Nếu chọn cách cũ (1.5% doanh thu) = 1.500.000 đ → Cách mới LỢI hơn!</span>
-                    </div>
-
-                    <div class="calculation-line">
-                        <strong>3️⃣ BHXH + BHYT:</strong> <span style="color: #ff6b35;">~5.200.000 đ/năm</span> (Mức cơ bản)
-                    </div>
-
-                    <div class="calculation-line">
-                        <strong>4️⃣ Phần mềm + Chữ ký số:</strong> <span style="color: #ff6b35;">~3.000.000 đ/năm</span>
-                    </div>
-
-                    <div class="total-line">
-                        <strong>⚡ TỔNG CHI PHÍ:</strong> ~11.500.000 đ/năm<br>
-                        <span style="font-size: 18px;">(Chưa đến 2 triệu/tháng!) 🎉</span>
+            <!-- Case Study 2: Cửa hàng Tạp hóa -->
+            <div class="case-card">
+                <div class="case-header" style="background: linear-gradient(135deg, #DBEAFE, #BFDBFE);">
+                    <div class="case-icon">🏪</div>
+                    <div class="case-info">
+                        <h3>Ví dụ 2: Cửa hàng Tạp hóa XYZ</h3>
+                        <p>Ngành Phân phối (GTGT 1%, TNCN 0.5%) • Lãi ròng 4% = 120 triệu</p>
                     </div>
                 </div>
-            </div>
+                <div class="case-body">
+                    <div class="case-stats">
+                        <div class="stat-box">
+                            <div class="label">Doanh thu/năm</div>
+                            <div class="value">3 Tỷ</div>
+                        </div>
+                        <div class="stat-box">
+                            <div class="label">Lợi nhuận ròng</div>
+                            <div class="value">120 triệu</div>
+                        </div>
+                        <div class="stat-box">
+                            <div class="label">Biên lợi nhuận</div>
+                            <div class="value" style="color: #DC2626;">4%</div>
+                        </div>
+                        <div class="stat-box">
+                            <div class="label">Phần vượt 500tr</div>
+                            <div class="value">2.5 Tỷ</div>
+                        </div>
+                    </div>
 
-            <!-- Section V: Process -->
-            <div class="section">
-                <h2 class="section-title"><span class="icon">📝</span> PHẦN V. QUY TRÌNH THỰC HIỆN</h2>
-                <p style="font-size: 18px; margin-bottom: 25px;">Để áp dụng phương pháp kê khai (được trừ chi phí), tuân thủ quy trình sau:</p>
+                    <!-- Comparison Table -->
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-bottom: 20px;">
+                        <div class="calculation-table">
+                            <div class="calc-header" style="background: #F59E0B;">
+                                <span>🅰️</span> PHƯƠNG ÁN A (Không kê khai)
+                            </div>
+                            <div class="calc-row">
+                                <div class="item"><span>🏷️</span><span>Thuế GTGT</span></div>
+                                <div class="amount">3 Tỷ × 1% = 30tr</div>
+                            </div>
+                            <div class="calc-row">
+                                <div class="item"><span>👤</span><span>Thuế TNCN</span></div>
+                                <div class="amount">(3 Tỷ-500tr) × 0.5% = 12.5tr</div>
+                            </div>
+                            <div class="calc-row total">
+                                <div class="item"><strong>TỔNG THUẾ</strong></div>
+                                <div class="amount" style="color: #16A34A;">42.500.000đ</div>
+                            </div>
+                        </div>
+                        <div class="calculation-table" style="background: #DBEAFE;">
+                            <div class="calc-header" style="background: #2563EB;">
+                                <span>🅱️</span> PHƯƠNG ÁN B (Kê khai)
+                            </div>
+                            <div class="calc-row">
+                                <div class="item"><span>🏷️</span><span>Thuế GTGT</span></div>
+                                <div class="amount">3 Tỷ × 1% = 30tr</div>
+                            </div>
+                            <div class="calc-row">
+                                <div class="item"><span>👤</span><span>Thuế TNCN</span></div>
+                                <div class="amount">120tr (lãi) × 15% = 18tr</div>
+                            </div>
+                            <div class="calc-row total" style="background: #93C5FD;">
+                                <div class="item"><strong>TỔNG THUẾ</strong></div>
+                                <div class="amount" style="color: #DC2626;">48.000.000đ</div>
+                            </div>
+                        </div>
+                    </div>
 
-                <div style="margin: 30px 0;">
-                    <div class="badge" style="background: #2196f3; color: #fff; font-size: 16px;">GIAI ĐOẠN 1</div>
-                    <h3 style="font-size: 24px; margin: 15px 0;">🔧 Chuẩn bị hạ tầng số</h3>
-                    <ol class="steps">
-                        <li><strong>Mua Chữ ký số (USB Token):</strong> Viettel/VNPT/MISA (~1.5 triệu/năm)</li>
-                        <li><strong>Mua Phần mềm Hóa đơn điện tử:</strong> (~1 triệu/năm)</li>
-                        <li><strong>Đăng ký với Cơ quan Thuế:</strong> Nộp tờ khai <span class="pill">01/ĐKTĐ-HĐĐT</span></li>
-                    </ol>
-                </div>
-
-                <div style="margin: 30px 0;">
-                    <div class="badge" style="background: #ff6b35; color: #fff; font-size: 16px;">GIAI ĐOẠN 2</div>
-                    <h3 style="font-size: 24px; margin: 15px 0;">🔄 Vận hành hàng ngày</h3>
-                    <ol class="steps">
-                        <li><strong>Đầu ra (Bán hàng):</strong> Xuất hóa đơn điện tử cho khách (Bắt buộc) 🧾</li>
-                        <li><strong>Đầu vào (Mua hàng):</strong> Lấy hóa đơn đỏ (HĐĐT) cho mọi chi phí: Điện, nước, internet, nguyên vật liệu. Lưu file XML/PDF vào máy tính 💾</li>
-                        <li><strong>Sổ sách:</strong> Ghi chép vào Sổ doanh thu & Sổ chi phí (Excel hoặc phần mềm kế toán HKD) 📊</li>
-                    </ol>
-                </div>
-
-                <div style="margin: 30px 0;">
-                    <div class="badge" style="background: #4caf50; color: #fff; font-size: 16px;">GIAI ĐOẠN 3</div>
-                    <h3 style="font-size: 24px; margin: 15px 0;">📤 Báo cáo Quý</h3>
-                    <ol class="steps">
-                        <li>Truy cập <strong style="color: #2196f3;">thuedientu.gdt.gov.vn</strong></li>
-                        <li>Chọn tờ khai <span class="pill">01/CNKD</span></li>
-                        <li>Nhập Doanh thu quý & Chi phí hợp lý 💻</li>
-                        <li>Ký số và nộp tờ khai (Hạn: cuối tháng đầu quý sau) ✅</li>
-                    </ol>
-                </div>
-            </div>
-
-            <!-- Section VI: Action Plan -->
-            <div class="section">
-                <h2 class="section-title"><span class="icon">🎯</span> PHẦN VI. KHUYẾN NGHỊ HÀNH ĐỘNG</h2>
-                <p style="font-size: 20px; font-weight: bold; margin-bottom: 25px;">Ngay trong tháng 12/2025, bạn cần:</p>
-
-                <ul class="checklist">
-                    <li><strong>Rà soát doanh thu 2025:</strong> Chốt sổ để quyết toán theo luật cũ</li>
-                    <li><strong>Trang bị công nghệ:</strong> Liên hệ nhà mạng mua Chữ ký số và Phần mềm HĐĐT nếu chưa có</li>
-                    <li><strong>Đàm phán nhà cung cấp:</strong> Thông báo từ 2026 sẽ lấy hóa đơn đỏ cho mọi đơn hàng nhập vào</li>
-                    <li><strong>Tải App eTax Mobile:</strong> Để nộp thuế và tra cứu nghĩa vụ nhanh chóng</li>
-                </ul>
-
-                <div style="text-align: center; margin-top: 40px;">
-                    <a href="#" class="action-button">🚀 Bắt đầu ngay hôm nay!</a>
+                    <div class="case-note" style="background: #FEF3C7; border-color: #F59E0B;">
+                        <span class="icon">👉</span>
+                        <p><strong>KẾT LUẬN: Phương án A vẫn tối ưu!</strong> Dù lãi thấp (4%), thuế suất khoán 0.5% vẫn lợi hơn 15% trên lãi. <strong>Chỉ chọn B khi lỗ hoặc biên lãi < 2.7%.</strong></p>
+                    </div>
                 </div>
             </div>
         </div>
+    </section>
 
-        <!-- Footer -->
-        <div class="footer">
-            <div class="plane-icon">✈️</div>
-            <h3 style="font-size: 28px; margin: 20px 0;">Cải Cách Thuế 2026</h3>
-            <p style="font-size: 16px; opacity: 0.9;">Thông tin chỉ mang tính chất tham khảo. Vui lòng tham khảo ý kiến chuyên gia thuế để được tư vấn chi tiết cho trường hợp cụ thể.</p>
-            <p style="margin-top: 20px; font-size: 14px;">© 2025 ThuếHộKinhDoanh.vn | Made with ❤️ by Claude</p>
+    <!-- SOP Section -->
+    <section class="sop-section" id="sop">
+        <div class="section-header">
+            <div class="section-badge" style="background: var(--blue); color: white; border-color: var(--blue);">📋 PHẦN IV</div>
+            <h2 class="section-title">Quy trình thực hiện (SOP)</h2>
+            <p class="section-subtitle">3 giai đoạn để áp dụng phương pháp kê khai mới</p>
         </div>
-    </div>
+
+        <div class="sop-container">
+            <div class="timeline">
+                <!-- Phase 1 -->
+                <div class="timeline-phase">
+                    <div class="phase-number">1</div>
+                    <div class="phase-content">
+                        <div class="phase-header prep">
+                            <span style="font-size: 1.5rem;">⚙️</span>
+                            <h3>Giai đoạn 1: Chuẩn bị hạ tầng số</h3>
+                        </div>
+                        <div class="phase-body">
+                            <ul class="step-list">
+                                <li class="step-item">
+                                    <div class="step-icon">🔐</div>
+                                    <div class="step-content">
+                                        <h4>Mua Chữ ký số (USB Token)</h4>
+                                        <p>Liên hệ: Viettel, VNPT, hoặc MISA</p>
+                                        <span class="code">~1.500.000đ/năm</span>
+                                    </div>
+                                </li>
+                                <li class="step-item">
+                                    <div class="step-icon">📄</div>
+                                    <div class="step-content">
+                                        <h4>Mua Phần mềm Hóa đơn điện tử</h4>
+                                        <p>Để xuất hóa đơn cho khách hàng</p>
+                                        <span class="code">~1.000.000đ/năm</span>
+                                    </div>
+                                </li>
+                                <li class="step-item">
+                                    <div class="step-icon">📝</div>
+                                    <div class="step-content">
+                                        <h4>Đăng ký với cơ quan Thuế</h4>
+                                        <p>Nộp tờ khai đăng ký sử dụng hóa đơn điện tử có mã</p>
+                                        <span class="code">Mẫu: 01/ĐKTĐ-HĐĐT</span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Phase 2 -->
+                <div class="timeline-phase">
+                    <div class="phase-number">2</div>
+                    <div class="phase-content">
+                        <div class="phase-header run">
+                            <span style="font-size: 1.5rem;">🔄</span>
+                            <h3>Giai đoạn 2: Vận hành hàng ngày</h3>
+                        </div>
+                        <div class="phase-body">
+                            <ul class="step-list">
+                                <li class="step-item">
+                                    <div class="step-icon" style="background: #D1FAE5;">💸</div>
+                                    <div class="step-content">
+                                        <h4>Đầu ra: Bán hàng</h4>
+                                        <p>Xuất hóa đơn điện tử cho mọi giao dịch (bắt buộc)</p>
+                                    </div>
+                                </li>
+                                <li class="step-item">
+                                    <div class="step-icon" style="background: #D1FAE5;">🧾</div>
+                                    <div class="step-content">
+                                        <h4>Đầu vào: Mua hàng</h4>
+                                        <p>Lấy hóa đơn đỏ (HĐĐT) cho MỌI chi phí: Điện, nước, internet, nguyên vật liệu...</p>
+                                        <p><strong>Lưu file XML/PDF vào máy tính theo tháng</strong></p>
+                                    </div>
+                                </li>
+                                <li class="step-item">
+                                    <div class="step-icon" style="background: #D1FAE5;">📊</div>
+                                    <div class="step-content">
+                                        <h4>Sổ sách</h4>
+                                        <p>Ghi chép vào Sổ doanh thu & Sổ chi phí (Excel hoặc phần mềm kế toán HKD)</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Phase 3 -->
+                <div class="timeline-phase">
+                    <div class="phase-number">3</div>
+                    <div class="phase-content">
+                        <div class="phase-header report">
+                            <span style="font-size: 1.5rem;">📤</span>
+                            <h3>Giai đoạn 3: Báo cáo Quý</h3>
+                        </div>
+                        <div class="phase-body">
+                            <ul class="step-list">
+                                <li class="step-item">
+                                    <div class="step-icon" style="background: #FEE2E2;">🌐</div>
+                                    <div class="step-content">
+                                        <h4>Truy cập cổng thuế điện tử</h4>
+                                        <span class="code">thuedientu.gdt.gov.vn</span>
+                                    </div>
+                                </li>
+                                <li class="step-item">
+                                    <div class="step-icon" style="background: #FEE2E2;">📋</div>
+                                    <div class="step-content">
+                                        <h4>Chọn tờ khai 01/CNKD</h4>
+                                        <p>Nhập Doanh thu quý & Chi phí hợp lý</p>
+                                    </div>
+                                </li>
+                                <li class="step-item">
+                                    <div class="step-icon" style="background: #FEE2E2;">✍️</div>
+                                    <div class="step-content">
+                                        <h4>Ký số và nộp tờ khai</h4>
+                                        <p>Hạn chót: Ngày cuối tháng đầu quý sau</p>
+                                        <span class="code">VD: Q1 → Nộp trước 30/04</span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Action Plan Section -->
+    <section class="action-section" id="action">
+        <div class="section-header">
+            <div class="section-badge">🚀 PHẦN V</div>
+            <h2 class="section-title">Khuyến nghị hành động</h2>
+            <p class="section-subtitle">4 việc cần làm NGAY trong tháng 12/2025</p>
+        </div>
+
+        <div class="action-container">
+            <div class="action-grid">
+                <div class="action-card">
+                    <div class="action-number">1</div>
+                    <h3>📊 Rà soát doanh thu 2025</h3>
+                    <p>Chốt sổ để quyết toán theo luật cũ. Đảm bảo mọi số liệu chính xác trước khi chuyển sang cơ chế mới.</p>
+                </div>
+                <div class="action-card">
+                    <div class="action-number">2</div>
+                    <h3>💻 Trang bị công nghệ</h3>
+                    <p>Liên hệ nhà mạng mua Chữ ký số và Phần mềm HĐĐT nếu chưa có. Đây là bắt buộc từ 2026!</p>
+                </div>
+                <div class="action-card">
+                    <div class="action-number">3</div>
+                    <h3>🤝 Đàm phán nhà cung cấp</h3>
+                    <p>Thông báo từ 2026 sẽ lấy hóa đơn đỏ cho MỌI đơn hàng nhập vào để làm căn cứ trừ chi phí.</p>
+                </div>
+                <div class="action-card">
+                    <div class="action-number">4</div>
+                    <h3>📱 Tải App eTax Mobile</h3>
+                    <p>Để nộp thuế và tra cứu nghĩa vụ thuế nhanh chóng, tiện lợi ngay trên điện thoại.</p>
+                </div>
+            </div>
+
+            <div class="action-cta">
+                <button class="cta-button">
+                    <span>📥</span> Tải bản PDF đầy đủ
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-links">
+            <a href="#" class="footer-link">
+                <span>🌐</span> Cổng thuế điện tử
+            </a>
+            <a href="#" class="footer-link">
+                <span>📱</span> App eTax Mobile
+            </a>
+            <a href="#" class="footer-link">
+                <span>📞</span> Hotline hỗ trợ
+            </a>
+            <a href="#" class="footer-link">
+                <span>📧</span> Liên hệ tư vấn
+            </a>
+        </div>
+        <p class="footer-text">
+            © 2025 Báo cáo chuyên đề Cải cách Thuế HKD 2026 • Theo Công văn 18491/BTC-CST & Thông tư 40/2021/TT-BTC
+        </p>
+    </footer>
+
+    <script>
+        // Smooth scroll for navigation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add scroll animation for cards
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.tax-card, .option-card, .action-card, .timeline-phase').forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(30px)';
+            card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(card);
+        });
+    </script>
 </body>
 </html>
